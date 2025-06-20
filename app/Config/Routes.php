@@ -22,6 +22,12 @@ $routes->group('cart', ['filter' => 'auth'], function ($routes) {
     $routes->get('clear', 'Cart::cart_clear');
 });
 
+// Checkout Routes
+$routes->get('checkout', 'Cart::checkout', ['filter' => 'auth']);
+$routes->get('get-location', 'Cart::getLocation', ['filter' => 'auth']);
+$routes->get('get-cost', 'Cart::getCost', ['filter' => 'auth']);
+$routes->post('buy', 'Cart::buy', ['filter' => 'auth']);
+
 // Product Routes
 $routes->group('product', ['filter' => 'auth'], function ($routes) {
     $routes->get('', 'Product::index');
