@@ -40,5 +40,11 @@ $routes->group('product', ['filter' => 'auth'], function ($routes) {
 // Login Routes
 $routes->get('/login', 'Login::index', ['filter' => 'auth']);
 
+// Profile Routes
+$routes->get('profile', 'Home::profile', ['filter' => 'auth']);
+
+//REST API
+$routes->resource('api', ['controller' => 'apiController']);
+
 // Alann Routes
 $routes->get('/me', 'Me::index');
