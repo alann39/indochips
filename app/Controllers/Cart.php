@@ -173,4 +173,14 @@ class Cart extends BaseController
             return redirect()->to(base_url());
         }
     }
+
+    public function getCartCount()
+    {
+        $cartCount = $this->cart->totalItems();
+        
+        return $this->response->setJSON([
+            'success' => true,
+            'count' => $cartCount
+        ]);
+    }
 }

@@ -20,6 +20,7 @@ $routes->group('cart', ['filter' => 'auth'], function ($routes) {
     $routes->post('edit', 'Cart::cart_edit');
     $routes->get('delete/(:any)', 'Cart::cart_delete/$1');
     $routes->get('clear', 'Cart::cart_clear');
+    $routes->get('count', 'Cart::getCartCount'); // New route for cart count
 });
 
 // Checkout Routes
@@ -48,3 +49,21 @@ $routes->resource('api', ['controller' => 'apiController']);
 
 // Alann Routes
 $routes->get('/me', 'Me::index');
+
+// Landing Page Routes
+$routes->get('/landing', function() {
+    $filepath = APPPATH . 'index.html';
+    if (file_exists($filepath)) {
+        $content = file_get_contents($filepath);
+        // Fix asset paths untuk CodeIgniter
+        $content = str_replace('src="/assets/', 'src="' . base_url('assets/'), $content);
+        $content = str_replace('href="/assets/', 'href="' . base_url('assets/'), $content);
+        return $content;
+    }
+    throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+});
+
+$routes->get('/index.html', function() {
+    return redirect()->to(base_url('landing'));
+});
+
