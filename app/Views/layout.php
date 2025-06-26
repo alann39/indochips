@@ -96,14 +96,14 @@ if(uri_string()!=""){
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
   <!-- Vendor JS Files -->
-  <script src="<?= base_url()?>NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="<?= base_url()?>NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= base_url()?>NiceAdmin/assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="<?= base_url()?>NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
-  <script src="<?= base_url()?>NiceAdmin/assets/vendor/quill/quill.min.js"></script>
-  <script src="<?= base_url()?>NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="<?= base_url()?>NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="<?= base_url()?>NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?= base_url()?>NiceAdmin/assets/apexcharts/apexcharts.min.js"></script>
+  <script src="<?= base_url()?>NiceAdmin/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url()?>NiceAdmin/assets/chart.js/chart.umd.js"></script>
+  <script src="<?= base_url()?>NiceAdmin/assets/echarts/echarts.min.js"></script>
+  <script src="<?= base_url()?>NiceAdmin/assets/quill/quill.min.js"></script>
+  <script src="<?= base_url()?>NiceAdmin/assets/simple-datatables/simple-datatables.js"></script>
+  <script src="<?= base_url()?>NiceAdmin/assets/tinymce/tinymce.min.js"></script>
+  <script src="<?= base_url()?>NiceAdmin/assets/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="<?= base_url()?>NiceAdmin/assets/js/main.js"></script>

@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link <?php echo (uri_string() == '') ? "" : "collapsed" ?>" href="/">
+        <a class="nav-link <?php echo (uri_string() == '') ? "" : "collapsed" ?>" href="/katalog">
           <i class="bi bi-grid"></i>
           <span>Catalogue</span>
         </a>

@@ -11,7 +11,7 @@ $routes->get('login', 'AuthController::login');
 $routes->post('login', 'AuthController::login', ['filter' => 'redirect']);
 $routes->get('logout', 'AuthController::logout');
 
-$routes->get('/catalog', 'Catalog::index', ['filter' => 'auth']);
+$routes->get('/katalog', 'Katalog::index', ['filter' => 'auth']);
 
 // Cart Routes
 $routes->group('cart', ['filter' => 'auth'], function ($routes) {
@@ -42,7 +42,7 @@ $routes->group('product', ['filter' => 'auth'], function ($routes) {
 $routes->get('/login', 'Login::index', ['filter' => 'auth']);
 
 // Profile Routes
-$routes->get('profile', 'Home::profile', ['filter' => 'auth']);
+$routes->get('profile', 'Katalog::profile', ['filter' => 'auth']);
 
 //REST API
 $routes->resource('api', ['controller' => 'apiController']);
@@ -50,18 +50,6 @@ $routes->resource('api', ['controller' => 'apiController']);
 // Alann Routes
 $routes->get('/me', 'Me::index');
 
-// Landing Page Routes
-$routes->get('/landing', function() {
-    $filepath = APPPATH . 'index.html';
-    if (file_exists($filepath)) {
-        $content = file_get_contents($filepath);
-        // Fix asset paths untuk CodeIgniter
-        $content = str_replace('src="/assets/', 'src="' . base_url('assets/'), $content);
-        $content = str_replace('href="/assets/', 'href="' . base_url('assets/'), $content);
-        return $content;
-    }
-    throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
-});
 
 $routes->get('/index.html', function() {
     return redirect()->to(base_url('landing'));
