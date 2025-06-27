@@ -20,9 +20,9 @@
                 <div class="d-flex align-items-center justify-content-between w-100">
                     <!-- Left side: Logo -->
                     <div class="d-flex align-items-center">
-                        <a href="/home" class="logo d-flex align-items-center gap-2">
-                            <img src="/assets/images/Alann.works Logo.png" alt="SCND Logo" width="32">
-                            <span>SCND</span>
+                        <a href="/" class="logo d-flex align-items-center gap-2">
+                            <img src="/assets/images/logo-indochips.png" alt="SCND Logo" width="32">
+                            <span>Indochips</span>
                         </a>
                     </div>
                     
