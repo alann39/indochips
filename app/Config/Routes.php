@@ -42,7 +42,7 @@ $routes->group('product', ['filter' => 'auth'], function ($routes) {
 $routes->get('/login', 'Login::index', ['filter' => 'auth']);
 
 // Profile Routes
-$routes->get('profile', 'Katalog::profile', ['filter' => 'auth']);
+$routes->get('history', 'Katalog::history', ['filter' => 'auth']);
 
 //REST API
 $routes->resource('api', ['controller' => 'apiController']);

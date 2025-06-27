@@ -25,8 +25,8 @@ $password = [
                 <div class="col-lg-5 col-md-8 d-flex flex-column align-items-center justify-content-center">
                     <div class="login-card">
                         <div class="login-logo">
-                            <img src="<?php echo base_url() ?>NiceAdmin/assets/img/logo.png" alt="Logo">
-                            <span class="fs-3 fw-bold">SCND</span>
+                            <img src="<?php echo base_url() ?>/assets/images/logo-indochips.png" alt="Logo">
+                            <span class="fs-3 fw-bold">by INDOCHIPS</span>
                         </div>
                         <div class="login-title">Login to Your Account</div>
                         <div class="login-subtitle">Enter your username & password to login</div>

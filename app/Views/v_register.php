@@ -15,8 +15,8 @@
                     <div class="col-lg-7 col-md-11 d-flex flex-column align-items-center justify-content-center">
                         <div class="login-card w-100" style="max-width: 700px;">
                             <div class="login-logo">
-                                <img src="/NiceAdmin/assets/img/logo.png" alt="Logo">
-                                <span class="fs-3 fw-bold">SCND</span>
+                                <img src="<?= base_url()?>/assets/images/logo-indochips.png" alt="Logo">
+                                <span class="fs-3 fw-bold">by IndoChips</span>
                             </div>
                             <div class="login-title">Create Your Account</div>
                             <div class="login-subtitle">Isi data di bawah untuk membuat akun baru</div>

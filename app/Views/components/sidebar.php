@@ -6,7 +6,7 @@
       <li class="nav-item">
         <a class="nav-link <?php echo (uri_string() == '') ? "" : "collapsed" ?>" href="/katalog">
           <i class="bi bi-grid"></i>
-          <span>Catalogue</span>
+          <span>Catalog</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
@@ -23,7 +23,7 @@
         <li class="nav-item">
           <a class="nav-link <?php echo (uri_string() == 'product') ? "" : "collapsed" ?>" href="/product">
             <i class="bi bi-box"></i>
-            <span>Product</span>
+            <span>Product Setting</span>
           </a>
         </li><!-- End Product Nav -->
       <?php
@@ -31,7 +31,7 @@
       ?>
 
       <li class="nav-item">
-          <a class="nav-link <?php echo (uri_string() == 'profile') ? "" : "collapsed" ?>" href="profile">
+          <a class="nav-link <?php echo (uri_string() == 'history') ? "" : "collapsed" ?>" href="history">
               <i class="bi bi-clock"></i>
               <span>History</span>
           </a>

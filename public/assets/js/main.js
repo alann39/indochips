@@ -310,25 +310,58 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updateCartCount() {
-        const cartCount = document.querySelector('.cart-count');
-        const itemCount = document.querySelectorAll('.cart-item').length;
-        if (cartCount) {
-            cartCount.textContent = `(${itemCount} ${itemCount === 1 ? 'item' : 'items'})`;
-        }
-        
-        // Show/hide empty cart message
-        const cartContent = document.querySelector('.cart-content');
-        const cartHeader = document.querySelector('.cart-header');
-        
-        if (itemCount === 0 && cartContent && cartHeader) {
-            cartContent.innerHTML = `
-                <div class="empty-cart">
-                    <p>Your cart is empty</p>
-                    <a href="/catalog" class="btn">Start Shopping</a>
-                </div>
-            `;
-            cartHeader.style.display = 'none';
-        }
+        fetch('/cart/count')
+            .then(response => response.json())
+            .then(data => {
+                const cartBadge = document.querySelector('.cart-count-badge');
+                if (cartBadge) {
+                    cartBadge.textContent = data.count || 0;
+                    // Hide badge if cart is empty
+                    if (data.count > 0) {
+                        cartBadge.style.display = 'inline-block';
+                    } else {
+                        cartBadge.style.display = 'none';
+                    }
+                }
+            })
+            .catch(error => {
+                console.log('Error fetching cart count:', error);
+                // Fallback to localStorage if API fails
+                const cartItems = JSON.parse(localStorage.getItem('cart_items') || '[]');
+                const cartBadge = document.querySelector('.cart-count-badge');
+                if (cartBadge) {
+                    cartBadge.textContent = cartItems.length;
+                    if (cartItems.length > 0) {
+                        cartBadge.style.display = 'inline-block';
+                    } else {
+                        cartBadge.style.display = 'none';
+                    }
+                }
+            });
+    }
+    
+    function addToCart(productId) {
+        fetch('/cart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({
+                product_id: productId,
+                quantity: 1
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                updateCartCount();
+                alert('Item added to cart!');
+            }
+        })
+        .catch(error => {
+            console.error('Error adding to cart:', error);
+        });
     }
     
     // Initialize cart if we're on the cart page
@@ -578,4 +611,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.catalog-section')) {
         initCatalog();
     }
+
+    updateCartCount();
+    setInterval(updateCartCount, 30000);
 });
+
+window.addEventListener('cartUpdated', updateCartCount);

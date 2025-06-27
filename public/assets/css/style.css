@@ -111,9 +111,22 @@ a:hover {
 
 /* Navbar */
 .navbar {
-        border-bottom: 1px solid #eee;
-        background: #fff;
-    }
+    padding: 0.8rem 2.5rem;
+    min-height: 64px;
+}
+
+.navbar .w-100 {
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.navbar .nav-links {
+    gap: 2.5rem;
+}
+
+.navbar .nav-icons {
+    gap: 1.5rem;
+}
 
     /* Logo styles */
     .logo {
@@ -281,7 +294,7 @@ header {
 }
 
 header .container {
-  background-color: rgba(255, 255, 255, 0.75); /* Warna transparant dengan sedikit putih */
+  background-color:rgba(255, 255, 255, 0.25); /* Warna transparant dengan sedikit putih */
   backdrop-filter: blur(10px); /* Efek blur */
   -webkit-backdrop-filter: blur(10px); /* Untuk Safari */
   border-radius: calc(var(--card-border-radius)*2);
@@ -397,11 +410,13 @@ nav {
   transition: all 0.3s ease;
   border-radius: 12px;
   background: var(--primary-color);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .product-image {
@@ -1944,4 +1959,22 @@ nav {
 }
 .login-footer a:hover {
     text-decoration: underline;
+}
+
+/* Home Page Product Card Styles */
+.product-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.cart-count-badge {
+    font-size: 0.75rem;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

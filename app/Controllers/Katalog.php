@@ -30,7 +30,7 @@ class Katalog extends BaseController
         return view('v_katalog', $data);
     }
 
-    public function profile()
+    public function history()
     {
         $username = session()->get('username');
         $data['username'] = $username;
@@ -52,6 +52,6 @@ class Katalog extends BaseController
 
         $data['product'] = $product;
 
-        return view('v_profile', $data);
+        return view('v_history', $data);
     }
 }

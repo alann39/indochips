@@ -12,27 +12,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/mobile-menu.css">
-    
-    <style>
-        .product-card {
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .cart-count-badge {
-            font-size: 0.75rem;
-            min-width: 18px;
-            height: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
 </head>
 <body>    <!-- Header Section -->
     <header>
@@ -49,7 +28,7 @@
                     
                     <!-- Center: Navigation Links -->
                     <div class="nav-links d-none d-lg-flex align-items-center">
-                        <a href="/home" class="nav-link">Home</a>
+                        <a href="/" class="nav-link">Home</a>
                         <a href="/katalog" class="nav-link">Catalog</a>
                         <a href="#" class="nav-link">Category</a>
                     </div>
@@ -59,9 +38,6 @@
                         <a href="/home" class="nav-icon" title="Search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </a>
-                        <?php if (!session('isLoggedIn')): ?>
-                        <a href="/register" class="btn btn-outline-primary ms-2 d-none d-lg-inline-block">Register</a>
-                        <?php endif; ?>
                         <div class="dropdown">
                             <a href="#" class="nav-icon dropdown-toggle" data-bs-toggle="dropdown" title="Account">
                                 <i class="fa-solid fa-user"></i>
@@ -108,7 +84,7 @@
             </div>
             <div class="offcanvas-body">
                 <div class="mobile-nav-links">
-                    <a href="/home" class="nav-link">Home</a>
+                    <a href="/" class="nav-link">Home</a>
                     <a href="/catalog" class="nav-link">Catalog</a>
                     <a href="/cart" class="nav-link">Cart</a>
                     <a href="/product" class="nav-link">Product</a>
@@ -126,7 +102,11 @@
         <div class="container">
             <h1>Every product deserves a second chance.</h1>
             <p class="hero-description">Discover curated pre-loved pieces that combine quality, sustainability, and style—all at accessible prices.</p>
-            <a href="/catalog" class="btn">Explore Collection</a>
+            <?php if (!session('isLoggedIn')): ?>
+                <a href="/register" class="btn btn-primary btn-lg">Register</a>
+            <?php else: ?>
+                <a href="/katalog" class="btn btn-primary btn-lg">Explore Collection</a>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -212,35 +192,6 @@
                     <div class="category-title">
                         <h3>Lifestyle</h3>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="steps">
-                <!-- Step 1 -->
-                <div class="step-card">
-                    <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <h3>Browse</h3>
-                    <p>Explore our curated collection of high-quality pre-loved items across various categories.</p>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="step-card">
-                    <div class="step-icon"><i class="fa-solid fa-tag"></i></div>
-                    <h3>Buy or Make an Offer</h3>
-                    <p>Purchase at the listed price or make an offer on items you love.</p>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="step-card">
-                    <div class="step-icon"><i class="fa-solid fa-truck"></i></div>
-                    <h3>Get It Delivered</h3>
-                    <p>Sit back as your carefully packaged pre-loved treasures make their way to you.</p>
                 </div>
             </div>
         </div>
@@ -500,77 +451,5 @@
     <!-- JavaScript Files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/main.js"></script>
-    
-    <script>
-        // Function to update cart count
-        function updateCartCount() {
-            fetch('/cart/count')
-                .then(response => response.json())
-                .then(data => {
-                    const cartBadge = document.querySelector('.cart-count-badge');
-                    if (cartBadge) {
-                        cartBadge.textContent = data.count || 0;
-                        // Hide badge if cart is empty
-                        if (data.count > 0) {
-                            cartBadge.style.display = 'inline-block';
-                        } else {
-                            cartBadge.style.display = 'none';
-                        }
-                    }
-                })
-                .catch(error => {
-                    console.log('Error fetching cart count:', error);
-                    // Fallback to localStorage if API fails
-                    const cartItems = JSON.parse(localStorage.getItem('cart_items') || '[]');
-                    const cartBadge = document.querySelector('.cart-count-badge');
-                    if (cartBadge) {
-                        cartBadge.textContent = cartItems.length;
-                        if (cartItems.length > 0) {
-                            cartBadge.style.display = 'inline-block';
-                        } else {
-                            cartBadge.style.display = 'none';
-                        }
-                    }
-                });
-        }
-
-        // Update cart count on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            updateCartCount();
-            
-            // Update cart count every 30 seconds
-            setInterval(updateCartCount, 30000);
-        });
-
-        // Listen for cart update events
-        window.addEventListener('cartUpdated', updateCartCount);
-        
-        // Function to add item to cart (for demo purposes)
-        function addToCart(productId) {
-            // This would typically make an API call to add item to cart
-            fetch('/cart', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest'
-                },
-                body: JSON.stringify({
-                    product_id: productId,
-                    quantity: 1
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    updateCartCount();
-                    // Show success message
-                    alert('Item added to cart!');
-                }
-            })
-            .catch(error => {
-                console.error('Error adding to cart:', error);
-            });
-        }
-    </script>
 </body>
 </html> 
