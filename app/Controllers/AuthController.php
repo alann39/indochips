@@ -32,7 +32,7 @@ class AuthController extends BaseController
     if ($this->request->getPost()) {
         $rules = [
             'username' => 'required|min_length[6]',
-            'password' => 'required|min_length[7]|numeric',
+            'password' => 'required|min_length[7]',
         ];
 
         if ($this->validate($rules)) {
@@ -71,6 +71,49 @@ class AuthController extends BaseController
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('/');
+    }
+
+    public function register()
+    {
+        $data = [
+            'title' => 'Register',
+            'hlm' => 'Register'
+        ];
+        return view('v_register', $data);
+    }
+
+    public function processRegister()
+    {
+        if ($this->request->getPost()) {
+            $rules = [
+                'username' => 'required|min_length[6]|is_unique[user.username]',
+                'email' => 'required|valid_email|is_unique[user.email]',
+                'password' => 'required|min_length[7]',
+                'password_confirm' => 'required|matches[password]'
+            ];
+
+            if ($this->validate($rules)) {
+                $username = $this->request->getVar('username');
+                $email = $this->request->getVar('email');
+                $password = $this->request->getVar('password');
+
+                $this->user->save([
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    'role' => 'user',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s')
+                ]);
+
+                session()->setFlashdata('success', 'Registrasi berhasil! Silakan login.');
+                return redirect()->to('/login');
+            } else {
+                session()->setFlashdata('failed', $this->validator->listErrors());
+                return redirect()->back()->withInput();
+            }
+        }
+        return redirect()->to('/register');
     }
 }

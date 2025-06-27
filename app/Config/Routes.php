@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index', ['filter' => 'auth']);
+$routes->get('/', 'Home::index');
 
 $routes->get('login', 'AuthController::login');
 $routes->post('login', 'AuthController::login', ['filter' => 'redirect']);
@@ -50,6 +50,8 @@ $routes->resource('api', ['controller' => 'apiController']);
 // Alann Routes
 $routes->get('/me', 'Me::index');
 
+$routes->get('register', 'AuthController::register');
+$routes->post('register', 'AuthController::processRegister');
 
 $routes->get('/index.html', function() {
     return redirect()->to(base_url('landing'));
