@@ -2,11 +2,14 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\ProductModel;
 
 class Home extends Controller
 {
     public function index()
     {
-        return view('home');
+        $productModel = new ProductModel();
+        $products = $productModel->findAll();
+        return view('home', ['products' => $products]);
     }
 }

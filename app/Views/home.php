@@ -115,44 +115,24 @@
         <div class="container">
             <h2 class="section-title">Featured Finds</h2>
             <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card" onclick="addToCart(1)">
-                    <span class="product-tag">Just In</span>
-                    <img src="https://images.unsplash.com/photo-1625591339971-4c9a87a66871?auto=format&fit=crop&w=600&q=80" alt="Vintage Leather Jacket" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-title">Vintage Leather Jacket</h3>
-                        <div class="product-price">
-                            <span>$120</span>
-                            <span class="original-price">$300</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-card" onclick="addToCart(2)">
-                    <span class="product-tag">Verified Quality</span>
-                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80" alt="Mid-Century Side Table" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-title">Mid-Century Side Table</h3>
-                        <div class="product-price">
-                            <span>$89</span>
-                            <span class="original-price">$250</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="product-card" onclick="addToCart(3)">
-                    <span class="product-tag">Loved Again</span>
-                    <img src="https://images.unsplash.com/photo-1600003263720-95b45a4035d5?auto=format&fit=crop&w=600&q=80" alt="Refurbished iPad Pro" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-title">Refurbished iPad Pro</h3>
-                        <div class="product-price">
-                            <span>$399</span>
-                            <span class="original-price">$799</span>
-                        </div>
-                    </div>
-                </div>
+                <?php if (!empty($products)): ?>
+                    <?php foreach ($products as $product): ?>
+                        <a href="/katalog" class="text-decoration-none text-dark">
+                            <div class="product-card">
+                                <span class="product-tag">Just In</span>
+                                <img src="<?= !empty($product['foto']) ? '/assets/images/' . $product['foto'] : 'https://via.placeholder.com/300x300?text=No+Image' ?>" alt="<?= esc($product['nama']) ?>" class="product-image">
+                                <div class="product-info">
+                                    <h3 class="product-title"><?= esc($product['nama']) ?></h3>
+                                    <div class="product-price">
+                                        <span>Rp<?= number_format($product['harga'], 0, ',', '.') ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="text-center w-100">Belum ada produk.</div>
+                <?php endif; ?>
             </div>
         </div>
     </section>
