@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Chance - Curated Pre-loved Products</title>    
+    <title>Indochips - Camilan Lokal, Rasa Istimewa</title>    
     <link href="assets/images/Alann.works Logo.png" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -180,27 +180,31 @@
     <!-- Why Choose Section -->
     <section class="why-choose">
         <div class="container">
-            <h2 class="section-title">Why Choose SCND</h2>
-            <div class="values">
+            <h2 class="section-title">Kenapa pilih Laris Manis?</h2>
+            <div class="values" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between;">
                 <!-- Value 1 -->
-                <div class="value-card">
-                    <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <h3>Sustainable Shopping</h3>
-                    <p>Every purchase extends a product's lifecycle and reduces waste, making a positive environmental impact.</p>
+                <div class="value-card" style="flex: 1 1 0; min-width: 220px; max-width: 24%;">
+                    <div class="value-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Bahan Pilihan Lokal</h3>
+                    <p>Setiap gigitan mengandung kebaikan dari alam Indonesia. Kami memilih bahan lokal terbaik untuk menjaga rasa dan kualitas.</p>
                 </div>
-                
                 <!-- Value 2 -->
-                <div class="value-card">
-                    <div class="value-icon"><i class="fa-solid fa-medal"></i></div>
-                    <h3>Verified Quality</h3>
-                    <p>All items undergo thorough inspection and cleaning before being added to our collection.</p>
+                <div class="value-card" style="flex: 1 1 0; min-width: 220px; max-width: 24%;">
+                    <div class="value-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Tanpa Pengawet</h3>
+                    <p>Tanpa tambahan bahan pengawet kimia. Kami mengutamakan rasa alami yang dihasilkan oleh alam.</p>
                 </div>
-                
                 <!-- Value 3 -->
-                <div class="value-card">
-                    <div class="value-icon"><i class="fa-solid fa-sack-dollar"></i></div>
-                    <h3>Affordable Prices</h3>
-                    <p>Access premium brands and products at a fraction of their original retail price.</p>
+                <div class="value-card" style="flex: 1 1 0; min-width: 220px; max-width: 24%;">
+                    <div class="value-icon"><i class="fa-solid fa-store"></i></div>
+                    <h3>Diproduksi UMKM Indonesia</h3>
+                    <p>Dibuat dengan bangga oleh tangan-tangan UMKM Indonesia. Dengan membeli produk ini, Anda turut mendukung pelaku usaha kecil di tanah air.</p>
+                </div>
+                <!-- Value 4 -->
+                <div class="value-card" style="flex: 1 1 0; min-width: 220px; max-width: 24%;">
+                    <div class="value-icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3>Cocok untuk Oleh-Oleh dan Camilan Harian</h3>
+                    <p>Praktis dan lezat, menjadikan produk ini pilihan tepat untuk camilan harian maupun buah tangan khas yang berkesan.</p>
                 </div>
             </div>
         </div>
@@ -209,8 +213,8 @@
     <!-- New Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="testimonial-heading">Loved by Customers</h2>
-            <p class="testimonial-subtitle">See what others are saying about our premium pre-loved products</p>
+            <h2 class="testimonial-heading">Telah menjadi favorit banyak pelanggan!</h2>
+            <p class="testimonial-subtitle">Lihatlah cerita para pelanggan tentang pengalaman mereka dengan produk kripik Indochips kami.</p>
             
             <div class="testimonial-slider">
                 <div class="quote-mark">
@@ -376,31 +380,31 @@
                 <img src="/assets/images/fear-cat.png" alt="Model with vintage fashion" />
             </div>
             <div class="footer-form">
-                <h2>Hey! Interested in staying in the loop, sign-up for our updates. We won't spam you, pinky promise 👌</h2>
+                <h2>Hai! Mau tetap update info terbaru dari kami? Yuk, daftar sekarang. Tenang aja, kami nggak akan spam 👌</h2>
                 <form class="signup-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Nama" required>
                     </div>
                     <div class="form-group">
                         <input type="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Phone">
+                        <input type="tel" placeholder="No.Telp">
                     </div>
                     <div class="form-consent">
                         <label>
                             <input type="checkbox">
-                            <span>I'd like to receive drop notifications and offers from Second Chance via email and/or occasional sms & consent to the privacy policy</span>
+                            <span>Saya ingin menerima info produk dan penawaran dari Indochips via email/SMS, dan menyetujui kebijakan privasi.</span>
                         </label>
                     </div>
-                    <button type="submit" class="btn-submit">Submit</button>
+                    <button type="submit" class="btn-submit">Kirim</button>
                 </form>
             </div>
         </div>
         
         <div class="footer-bottom">
             <div class="brand-wrapper">
-                <div class="brand-logo">Scnd.</div>
+                <div class="brand-logo">Indochips</div>
                 <div class="brand-avatars">
                     <img src="https://i.pravatar.cc/40?img=3" alt="Team avatar" class="avatar">
                     <img src="https://i.pravatar.cc/40?img=5" alt="Team avatar" class="avatar">
@@ -408,11 +412,11 @@
             </div>
             
             <div class="footer-legal">
-                <a href="/terms-of-service">Terms of services</a>
-                <a href="/return-policy">Return policy</a>
-                <a href="/terms-and-conditions">Terms and conditions</a>
-                <a href="/privacy-policy">Privacy policy</a>
-                <a href="/cookie-settings">Cookie Settings</a>
+                <a href="/terms-of-service">Syarat Penggunaan</a>
+                <a href="/return-policy">Kebijakan Pengembalian</a>
+                <a href="/terms-and-conditions">Syarat dan Ketentuan</a>
+                <a href="/privacy-policy">Kebijakan Privasi</a>
+                <a href="/cookie-settings">Pengaturan Cookie</a>
             </div>
             
             <div class="social-links">
@@ -423,7 +427,7 @@
             </div>
             
             <div class="copyright">
-                © 2025 Second Chance by Alann.
+                © 2025 Indochips by Laris Manis.
             </div>
         </div>
     </footer>
