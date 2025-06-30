@@ -227,10 +227,10 @@
                         <div class="testimonial-card">
                             <div class="testimonial-header">
                                 <div class="user-info">
-                                    <img src="https://i.pravatar.cc/60?img=3" alt="Sophia K." class="user-avatar">
+                                    <img src="https://i.pravatar.cc/60?img=3" alt="Agus Taufiqul" class="user-avatar">
                                     <div class="user-details">
-                                        <h4 class="user-name">Sophia K.</h4>
-                                        <p class="user-position">Fashion Designer, NYC</p>
+                                        <h4 class="user-name">Agus Taufiqul</h4>
+                                        <p class="user-position">Guru SD, Bandung</p>
                                     </div>
                                 </div>
                                 <div class="rating">
@@ -241,7 +241,7 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                             </div>
-                            <p class="testimonial-text">"I found a designer jacket I've been eyeing for years at less than half the retail price. The condition is impeccable—you'd never know it wasn't brand new. Second Chance has completely changed how I shop for designer pieces!"</p>
+                            <p class="testimonial-text">"Saya suka banget kripik telur asinnya! Gurihnya pas, nggak terlalu asin, dan renyahnya tahan lama. Cocok banget buat nemenin ngoreksi tugas murid. Anak-anak di rumah juga suka banget kuping gajah dan slondoknya!"</p>
                             <div class="testimonial-footer">
                                 <span class="verified-badge">Verified Customer</span>
                             </div>
@@ -253,10 +253,10 @@
                         <div class="testimonial-card">
                             <div class="testimonial-header">
                                 <div class="user-info">
-                                    <img src="https://i.pravatar.cc/60?img=11" alt="Marcus T." class="user-avatar">
+                                    <img src="https://i.pravatar.cc/60?img=11" alt="Budi Hartanto" class="user-avatar">
                                     <div class="user-details">
-                                        <h4 class="user-name">Marcus T.</h4>
-                                        <p class="user-position">Interior Designer, Los Angeles</p>
+                                        <h4 class="user-name">Budi Hartanto</h4>
+                                        <p class="user-position">Karyawan Swasta, Surabaya</p>
                                     </div>
                                 </div>
                                 <div class="rating">
@@ -267,7 +267,7 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                             </div>
-                            <p class="testimonial-text">"SCND has completely changed how I shop. I've furnished half my apartment with their finds and saved thousands while getting better quality than I could afford new. The mid-century pieces I found were in pristine condition and exactly as described."</p>
+                            <p class="testimonial-text">"Kue klici dan sale pisangnya nostalgia banget. Rasanya autentik seperti buatan nenek dulu. Indochips berhasil banget bawa cita rasa tradisional ke camilan kekinian. Packing-nya juga rapi, cocok buat oleh-oleh"</p>
                             <div class="testimonial-footer">
                                 <span class="verified-badge">Verified Customer</span>
                             </div>
@@ -279,10 +279,10 @@
                         <div class="testimonial-card">
                             <div class="testimonial-header">
                                 <div class="user-info">
-                                    <img src="https://i.pravatar.cc/60?img=5" alt="Elena R." class="user-avatar">
+                                    <img src="https://i.pravatar.cc/60?img=5" alt="Maria Yosephine" class="user-avatar">
                                     <div class="user-details">
-                                        <h4 class="user-name">Elena R.</h4>
-                                        <p class="user-position">Tech Blogger, Chicago</p>
+                                        <h4 class="user-name">Maria Yosephine</h4>
+                                        <p class="user-position">Mahasiswi, Yogyakarta</p>
                                     </div>
                                 </div>
                                 <div class="rating">
@@ -293,7 +293,7 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                             </div>
-                            <p class="testimonial-text">"The verification process gives me peace of mind. I bought a refurbished laptop that works perfectly—and came with a 6-month warranty! The customer service team was incredibly helpful when I had questions about the product's history and condition."</p>
+                            <p class="testimonial-text">"Puyur dan kecimpring singkongnya favorit aku! Teksturnya ringan, nggak bikin enek, dan cocok banget jadi camilan pas nugas. Harganya juga terjangkau untuk kantong mahasiswa. Pokoknya wajib stok tiap minggu!"</p>
                             <div class="testimonial-footer">
                                 <span class="verified-badge">Verified Customer</span>
                             </div>
@@ -305,10 +305,10 @@
                         <div class="testimonial-card">
                             <div class="testimonial-header">
                                 <div class="user-info">
-                                    <img src="https://i.pravatar.cc/60?img=7" alt="James D." class="user-avatar">
+                                    <img src="https://i.pravatar.cc/60?img=7" alt="Andre Faisal" class="user-avatar">
                                     <div class="user-details">
-                                        <h4 class="user-name">James D.</h4>
-                                        <p class="user-position">Sustainability Consultant, Portland</p>
+                                        <h4 class="user-name">Andre Faisal</h4>
+                                        <p class="user-position">Freelancer Desain Grafis, Jakarta</p>
                                     </div>
                                 </div>
                                 <div class="rating">
@@ -319,7 +319,7 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                             </div>
-                            <p class="testimonial-text">"As someone passionate about sustainable living, Second Chance aligns perfectly with my values. Not only am I extending the life of quality items, but I'm also reducing waste. The platform makes it easy to find eco-friendly alternatives to buying new, without sacrificing quality."</p>
+                            <p class="testimonial-text">"Aku paling suka kripik pisang rasa originalnya, renyah dan manisnya alami. Indochips ini jadi camilan wajib di meja kerja. Variannya banyak dan semuanya enak. Kualitas UMKM-nya nggak kalah sama brand besar!"</p>
                             <div class="testimonial-footer">
                                 <span class="verified-badge">Verified Customer</span>
                             </div>
@@ -333,8 +333,8 @@
                                 <div class="user-info">
                                     <img src="https://i.pravatar.cc/60?img=9" alt="Olivia P." class="user-avatar">
                                     <div class="user-details">
-                                        <h4 class="user-name">Olivia P.</h4>
-                                        <p class="user-position">Student, Boston</p>
+                                        <h4 class="user-name">Salvana Yusreski</h4>
+                                        <p class="user-position">Admin Toko, Pekalongan</p>
                                     </div>
                                 </div>
                                 <div class="rating">
@@ -345,7 +345,7 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                             </div>
-                            <p class="testimonial-text">"As a student on a budget, SCND has been a game-changer for me. I've managed to furnish my entire apartment with quality pieces that will last for years, all while staying within my limited budget. The shipping was quick and everything arrived exactly as pictured."</p>
+                            <p class="testimonial-text">"Kripik Indochips enak bangeet, paling suka kripik telur asin. Teman kantor juga suka semua produknya. Ngga kerasa bisa habis cuma dalam 10 menit!"</p>
                             <div class="testimonial-footer">
                                 <span class="verified-badge">Verified Customer</span>
                             </div>
