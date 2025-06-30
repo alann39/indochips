@@ -57,3 +57,8 @@ $routes->get('/index.html', function() {
     return redirect()->to(base_url('landing'));
 });
 
+// Admin Order Dashboard
+$routes->get('admin/orders', 'AdminOrderController::index');
+$routes->post('admin/orders/update-status/(:num)', 'AdminOrderController::updateStatus/$1');
+$routes->get('admin/orders/download', 'AdminOrderController::downloadReport');
+
