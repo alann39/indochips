@@ -12,10 +12,10 @@ if(uri_string()!=""){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <title>SCND - <?php echo $hlm ?></title>
+    <title>Indochips - <?php echo $hlm ?></title>
 
     <!-- Favicons -->
-    <link href="<?= base_url()?>assets/images/Alann.works Logo.png" rel="icon">
+    <link href="<?= base_url()?>assets/images/logo-indochips.png" rel="icon">
     <link href="<?= base_url()?>NiceAdmin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +56,7 @@ if(uri_string()!=""){
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Second Chance</h1>
+      <h1>Laris Manis by Indochips</h1>
       <nav>
         <ol class="breadcrumb">
         <?php

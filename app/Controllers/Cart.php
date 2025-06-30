@@ -40,8 +40,8 @@ class Cart extends BaseController
                 'name'      => $this->request->getPost('nama'),
                 'options'   => array('foto' => $this->request->getPost('foto'))
             ));
-            session()->setflashdata('success', 'Produk berhasil ditambahkan ke Cart. (<a href="' . base_url() . 'cart">Lihat</a>)');
-            return redirect()->to(base_url('/'));
+            session()->setflashdata('success', 'Product successfully added to cart! (<a href="' . base_url() . 'cart">View Cart</a>)');
+            return redirect()->to(base_url('katalog'));
         }
 
         public function cart_clear()

@@ -57,7 +57,7 @@ section:not(.hero) .container:hover {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-primary);
   background: #f6f9ff;
   color: #444444;
 }
@@ -78,7 +78,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-primary);
 }
 
 /*--------------------------------------------------------------
@@ -108,6 +108,7 @@ h6 {
   margin-bottom: 0;
   font-weight: 600;
   color: #012970;
+  font-family: var(--font-primary);
 }
 
 /*--------------------------------------------------------------
@@ -162,6 +163,7 @@ h6 {
   text-align: center;
   font-size: 15px;
   padding: 10px 25px;
+  font-family: var(--font-primary);
 }
 
 .dropdown-menu .dropdown-footer a {
@@ -280,7 +282,7 @@ h6 {
   font-size: 18px;
   font-weight: 500;
   color: #012970;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
 }
 
 .card-title span {
@@ -300,7 +302,7 @@ h6 {
 /* Alerts */
 .alert-heading {
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   font-size: 20px;
 }
 
@@ -349,7 +351,7 @@ h6 {
 /* Breadcrumbs */
 .breadcrumb {
   font-size: 14px;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-primary);
   color: #899bbd;
   font-weight: 600;
 }
@@ -416,7 +418,7 @@ h6 {
   font-size: 26px;
   font-weight: 700;
   color: #012970;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-primary);
 }
 
 .header {
@@ -477,6 +479,7 @@ h6 {
   border-radius: 3px;
   transition: 0.3s;
   width: 100%;
+  font-family: var(--font-primary);
 }
 
 .header .search-form input:focus,
@@ -527,6 +530,7 @@ h6 {
 .header-nav .nav-profile span {
   font-size: 14px;
   font-weight: 600;
+  font-family: var(--font-primary);
 }
 
 .header-nav .badge-number {
@@ -557,12 +561,14 @@ h6 {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 5px;
+  font-family: var(--font-primary);
 }
 
 .header-nav .notifications .notification-item p {
   font-size: 13px;
   margin-bottom: 3px;
   color: #919191;
+  font-family: var(--font-primary);
 }
 
 .header-nav .notifications .notification-item:hover {
@@ -592,12 +598,14 @@ h6 {
   font-weight: 600;
   margin-bottom: 5px;
   color: #444444;
+  font-family: var(--font-primary);
 }
 
 .header-nav .messages .message-item p {
   font-size: 13px;
   margin-bottom: 3px;
   color: #919191;
+  font-family: var(--font-primary);
 }
 
 .header-nav .messages .message-item:hover {
@@ -615,10 +623,12 @@ h6 {
   margin-bottom: 0;
   font-weight: 600;
   color: #444444;
+  font-family: var(--font-primary);
 }
 
 .header-nav .profile .dropdown-header span {
   font-size: 14px;
+  font-family: var(--font-primary);
 }
 
 .header-nav .profile .dropdown-item {
@@ -720,6 +730,7 @@ h6 {
   color: #899bbd;
   font-weight: 600;
   margin: 10px 0 5px 15px;
+  font-family: var(--font-primary);
 }
 
 .sidebar-nav .nav-link {
@@ -732,6 +743,7 @@ h6 {
   background: #f6f9ff;
   padding: 10px 15px;
   border-radius: 4px;
+  font-family: var(--font-primary);
 }
 
 .sidebar-nav .nav-link i {
@@ -782,6 +794,7 @@ h6 {
   transition: 0.3;
   padding: 10px 0 10px 40px;
   transition: 0.3s;
+  font-family: var(--font-primary);
 }
 
 .sidebar-nav .nav-content a i {
@@ -835,6 +848,7 @@ h6 {
   color: #aab7cf;
   margin-bottom: 0;
   padding: 0;
+  font-family: var(--font-primary);
 }
 
 .dashboard .filter .dropdown-item {
@@ -852,6 +866,7 @@ h6 {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  font-family: var(--font-primary);
 }
 
 .dashboard .card-icon {
@@ -941,6 +956,7 @@ h6 {
   margin-left: 95px;
   font-weight: bold;
   margin-bottom: 5px;
+  font-family: var(--font-primary);
 }
 
 .dashboard .news h4 a {
@@ -956,6 +972,7 @@ h6 {
   font-size: 14px;
   color: #777777;
   margin-left: 95px;
+  font-family: var(--font-primary);
 }
 
 /* Recent Sales */
@@ -1026,7 +1043,7 @@ h6 {
 }
 
 .iconslist .label {
-  font-family: var(--bs-font-monospace);
+  font-family: var(--font-primary);
   display: inline-block;
   width: 100%;
   overflow: hidden;
@@ -1049,10 +1066,12 @@ h6 {
   font-weight: 700;
   color: #2c384e;
   margin: 10px 0 0 0;
+  font-family: var(--font-primary);
 }
 
 .profile .profile-card h3 {
   font-size: 18px;
+  font-family: var(--font-primary);
 }
 
 .profile .profile-card .social-links a {
@@ -1071,20 +1090,24 @@ h6 {
 .profile .profile-overview .row {
   margin-bottom: 20px;
   font-size: 15px;
+  font-family: var(--font-primary);
 }
 
 .profile .profile-overview .card-title {
   color: #012970;
+  font-family: var(--font-primary);
 }
 
 .profile .profile-overview .label {
   font-weight: 600;
   color: rgba(1, 41, 112, 0.6);
+  font-family: var(--font-primary);
 }
 
 .profile .profile-edit label {
   font-weight: 600;
   color: rgba(1, 41, 112, 0.6);
+  font-family: var(--font-primary);
 }
 
 .profile .profile-edit img {
@@ -1098,10 +1121,12 @@ h6 {
   font-size: 18px;
   font-weight: 600;
   color: #4154f1;
+  font-family: var(--font-primary);
 }
 
 .faq .basic p {
   color: #6980aa;
+  font-family: var(--font-primary);
 }
 
 /*--------------------------------------------------------------
@@ -1122,6 +1147,7 @@ h6 {
   color: #012970;
   font-weight: 700;
   margin: 20px 0 10px 0;
+  font-family: var(--font-primary);
 }
 
 .contact .info-box p {
@@ -1129,6 +1155,7 @@ h6 {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  font-family: var(--font-primary);
 }
 
 .contact .php-email-form .error-message {
@@ -1139,6 +1166,7 @@ h6 {
   padding: 15px;
   margin-bottom: 24px;
   font-weight: 600;
+  font-family: var(--font-primary);
 }
 
 .contact .php-email-form .sent-message {
@@ -1149,6 +1177,7 @@ h6 {
   padding: 15px;
   margin-bottom: 24px;
   font-weight: 600;
+  font-family: var(--font-primary);
 }
 
 .contact .php-email-form .loading {
@@ -1157,6 +1186,7 @@ h6 {
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
+  font-family: var(--font-primary);
 }
 
 .contact .php-email-form .loading:before {
@@ -1177,6 +1207,7 @@ h6 {
   box-shadow: none;
   font-size: 14px;
   border-radius: 0;
+  font-family: var(--font-primary);
 }
 
 .contact .php-email-form input:focus,
@@ -1228,6 +1259,7 @@ h6 {
   color: #4154f1;
   margin-bottom: 0;
   line-height: 150px;
+  font-family: var(--font-primary);
 }
 
 .error-404 h2 {
@@ -1235,6 +1267,7 @@ h6 {
   font-weight: 700;
   color: #012970;
   margin-bottom: 30px;
+  font-family: var(--font-primary);
 }
 
 .error-404 .btn {
@@ -1266,6 +1299,7 @@ h6 {
 .footer .copyright {
   text-align: center;
   color: #012970;
+  font-family: var(--font-primary);
 }
 
 .footer .credits {
@@ -1273,6 +1307,7 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #012970;
+  font-family: var(--font-primary);
 }
 
 /*--------------------------------------------------------------
@@ -2385,4 +2420,18 @@ h6 {
     .sort-options select {
         width: 100%;
     }
+}
+
+/* Custom SweetAlert2 Toast Minimalist */
+.swal2-simple-toast {
+    min-width: 220px !important;
+    max-width: 320px !important;
+    font-size: 1rem !important;
+    padding: 0.75em 1.2em !important;
+}
+.swal2-icon {
+    margin: 0 0.5em 0 0 !important;
+}
+.swal2-html-container {
+    margin: 0 !important;
 }

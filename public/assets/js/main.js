@@ -617,3 +617,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('cartUpdated', updateCartCount);
+
+// AJAX Add to Cart for Catalog Page
+$(document).on('click', '.btn-add-to-cart', function() {
+    $.post('/cart', {
+        id: $(this).data('id'),
+        nama: $(this).data('nama'),
+        harga: $(this).data('harga'),
+        foto: $(this).data('foto')
+    }, function(response) {
+        if (typeof Swal !== 'undefined') {
+            Swal.fire({
+                icon: 'success',
+                html: 'Product successfully added to cart! (<a href="/cart">View Cart</a>)',
+                timer: 1800,
+                showConfirmButton: false,
+                toast: true,
+                position: 'bottom-end',
+                customClass: { popup: 'swal2-simple-toast' }
+            });
+        } else {
+            alert('Product successfully added to cart!');
+        }
+        if (typeof updateCartCount === 'function') {
+            updateCartCount();
+        }
+    });
+});
