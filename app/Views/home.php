@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Second Chance - Curated Pre-loved Products</title>    
-    <link href="assets/images/Alann.works Logo.png" rel="icon">
+    <link href="/assets/images/logo-indochips.png" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <!-- Template CSS Files -->
@@ -100,12 +100,12 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Every product deserves a second chance.</h1>
-            <p class="hero-description">Discover curated pre-loved pieces that combine quality, sustainability, and style—all at accessible prices.</p>
+            <h1>Selamat Datang di IndoChips: Rumahnya Keripik Laris Manis!</h1>
+            <p class="hero-description">Nikmati aneka keripik pilihan khas Indonesia dengan cita rasa gurih dan manis yang bikin ketagihan. Di bawah merek Laris Manis, IndoChips menghadirkan camilan berkualitas dari bahan lokal, cocok untuk semua suasana—santai, kerja, hingga kumpul keluarga.</p>
             <?php if (!session('isLoggedIn')): ?>
                 <a href="/register" class="btn btn-primary btn-lg">Register</a>
             <?php else: ?>
-                <a href="/katalog" class="btn btn-primary btn-lg">Explore Collection</a>
+                <a href="/katalog" class="btn btn-primary btn-lg">Temukan Produk Kami</a>
             <?php endif; ?>
         </div>
     </section>
@@ -113,7 +113,7 @@
     <!-- Featured Products Section -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Featured Finds</h2>
+            <h2 class="section-title">Produk Terlaris</h2>
             <div class="product-grid">
                 <?php if (!empty($products)): ?>
                     <?php foreach ($products as $product): ?>
@@ -140,37 +140,30 @@
     <!-- Categories Section -->
     <section class="categories">
         <div class="container">
-            <h2 class="section-title">Shop By Category</h2>
-            <div class="category-grid">
-                <!-- Category 1 -->
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80" alt="Fashion" class="category-image">
-                    <div class="category-title">
-                        <h3>Fashion</h3>
+            <h2 class="section-title">Kategori Produk</h2>
+            <div class="row">
+                <!-- Kategori Manis -->
+                <div class="col-md-6 mb-4">
+                    <h3 class="category-group-title">Kategori Manis</h3>
+                    <div class="category-grid" style="display: flex; gap: 24px;">
+                        <div class="category-card">
+                            <img src="/assets/images/kuping-gajah.png" alt="Kuping Gajah" class="category-image">
+                        </div>
+                        <div class="category-card">
+                            <img src="/assets/images/kue-klici.png" alt="Kue Klici" class="category-image">
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Category 2 -->
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=600&q=80" alt="Electronics" class="category-image">
-                    <div class="category-title">
-                        <h3>Electronics</h3>
-                    </div>
-                </div>
-                
-                <!-- Category 3 -->
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Furniture" class="category-image">
-                    <div class="category-title">
-                        <h3>Furniture</h3>
-                    </div>
-                </div>
-                
-                <!-- Category 4 -->
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1567225557594-88d73e55f2cb?auto=format&fit=crop&w=600&q=80" alt="Lifestyle" class="category-image">
-                    <div class="category-title">
-                        <h3>Lifestyle</h3>
+                <!-- Kategori Gurih -->
+                <div class="col-md-6 mb-4">
+                    <h3 class="category-group-title">Kategori Gurih</h3>
+                    <div class="category-grid" style="display: flex; gap: 24px;">
+                        <div class="category-card">
+                            <img src="/assets/images/keripik-telur-asin.png" alt="Keripik Telur Asin" class="category-image">
+                        </div>
+                        <div class="category-card">
+                            <img src="/assets/images/kecimpring-singkong.png" alt="Kecimpring Singkong" class="category-image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -432,4 +425,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
-</html> 
+</html>
