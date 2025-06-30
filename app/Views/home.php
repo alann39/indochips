@@ -100,13 +100,20 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Selamat Datang di IndoChips: Rumahnya Keripik Laris Manis!</h1>
-            <p class="hero-description">Nikmati aneka keripik pilihan khas Indonesia dengan cita rasa gurih dan manis yang bikin ketagihan. Di bawah merek Laris Manis, IndoChips menghadirkan camilan berkualitas dari bahan lokal, cocok untuk semua suasana—santai, kerja, hingga kumpul keluarga.</p>
-            <?php if (!session('isLoggedIn')): ?>
-                <a href="/register" class="btn btn-primary btn-lg">Register</a>
-            <?php else: ?>
-                <a href="/katalog" class="btn btn-primary btn-lg">Temukan Produk Kami</a>
-            <?php endif; ?>
+            <div class="row align-items-center">
+                <div class="col-md-8 mb-4 mb-md-0">
+                    <h1>Selamat Datang di IndoChips: Rumahnya Keripik Laris Manis!</h1>
+                    <p class="hero-description">Nikmati aneka keripik pilihan khas Indonesia dengan cita rasa gurih dan manis yang bikin ketagihan. Di bawah merek Laris Manis, IndoChips menghadirkan camilan berkualitas dari bahan lokal, cocok untuk semua suasana—santai, kerja, hingga kumpul keluarga.</p>
+                    <?php if (!session('isLoggedIn')): ?>
+                        <a href="/register" class="btn btn-primary btn-lg">Register</a>
+                    <?php else: ?>
+                        <a href="/katalog" class="btn btn-primary btn-lg">Temukan Produk Kami</a>
+                    <?php endif; ?>
+                </div>
+                <div class="col-md-4 text-end">
+                    <img src="/assets/images/logo-indochips.png" alt="Logo Indochips" class="img-fluid" style="max-width: 420px;">
+                </div>
+            </div>
         </div>
     </section>
 
